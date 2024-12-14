@@ -1,7 +1,7 @@
 ``` r
 if (!require(remotes))
     install.packages("remotes")
-remotes::install_github("irudnyts/openai", ref = "r6")
+remotes::install_github("irudnyts/openai")
 ```
 
 ## Authentication
@@ -20,13 +20,8 @@ you can use the following command (where
 with your actual key):
 
 ``` r
+#跟数信院客服领取独享key
 Sys.setenv(
     OPENAI_API_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 )
-```
-``` r
-voice_sample_ua <- system.file("extdata", "sample-ua.m4a", package = "openai")
-create_translation(file = voice_sample_ua, model = "whisper-1")
-#> $text
-#> [1] "I want to check how this model works"
 ```
