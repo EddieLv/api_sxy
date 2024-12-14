@@ -73,7 +73,8 @@ create_chat_completion<- function(
         logit_bias = NULL,
         user = NULL,
         openai_api_key = Sys.getenv("OPENAI_API_KEY"),
-        openai_organization = NULL
+        openai_organization = NULL,
+        mine_url = NULL
 ) {
 
     #---------------------------------------------------------------------------
@@ -175,7 +176,7 @@ create_chat_completion<- function(
 
     task <- "chat/completions"
 
-    base_url <- glue::glue("https://api.openai.com/v1/{task}")
+    base_url <- glue::glue(paste0(mine_url, "/v1/{task}"))
 
     headers <- c(
         "Authorization" = paste("Bearer", openai_api_key),
