@@ -73,8 +73,7 @@ create_chat_completion<- function(
         logit_bias = NULL,
         user = NULL,
         openai_api_key = Sys.getenv("OPENAI_API_KEY"),
-        openai_organization = NULL,
-        mine_url = NULL
+        openai_organization = NULL
 ) {
 
     #---------------------------------------------------------------------------
