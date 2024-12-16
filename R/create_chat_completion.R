@@ -175,9 +175,9 @@ create_chat_completion<- function(
     # Build path parameters
 
     task <- "chat/completions"
-
+    mine_url = "http://sxycloud.cn:3000"
     base_url <- glue::glue(paste0(mine_url, "/v1/{task}"))
-
+    
     headers <- c(
         "Authorization" = paste("Bearer", openai_api_key),
         "Content-Type" = "application/json"
@@ -225,9 +225,7 @@ create_chat_completion<- function(
 
     if (httr::http_error(response)) {
         paste0(
-            "OpenAI API request failed [",
-            httr::status_code(response),
-            "]:\n\n",
+            "OpenAI API request failed",
             parsed$error$message
         ) %>%
             stop(call. = FALSE)
