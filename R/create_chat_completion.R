@@ -224,7 +224,7 @@ create_chat_completion<- function(
 
     if (httr::http_error(response)) {
         paste0(
-            "OpenAI API request failed",
+            "API请求失败, 请寻找SXY技术支持",
             parsed$error$message
         ) %>%
             stop(call. = FALSE)
