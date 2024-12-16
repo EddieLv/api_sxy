@@ -225,6 +225,7 @@ create_chat_completion<- function(
     if (httr::http_error(response)) {
         paste0(
             "API请求失败, 请寻找SXY技术支持",
+            ":\n\n",
             parsed$error$message
         ) %>%
             stop(call. = FALSE)
