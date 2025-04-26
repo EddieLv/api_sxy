@@ -1,7 +1,7 @@
 ``` r
 if (!require(remotes))
     install.packages("remotes")
-remotes::install_github("EddieLv/openai")
+remotes::install_github("EddieLv/api_sxy")
 ```
 
 ## Authentication
