@@ -1,4 +1,4 @@
-Package: openai
+Package: api_sxy
 Type: Package
 Title: R Wrapper for OpenAI API
 Version: 0.4.1
