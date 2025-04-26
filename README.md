@@ -1,7 +1,7 @@
 ``` r
 if (!require(remotes))
     install.packages("remotes")
-remotes::install_github("EddieLv/api_sxy")
+remotes::install_github("EddieLv/apiSXY")
 ```
 
 ## Authentication
